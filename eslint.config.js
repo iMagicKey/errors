@@ -32,7 +32,7 @@ export default [
             indent: ['error', 4, { SwitchCase: 1 }],
             semi: 'off',
             'prettier/prettier': ['error', { endOfLine: 'auto' }],
-            'no-unused-vars': 'warn',
+            'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
             'max-len': ['error', { code: 150 }],
             'no-console': 'off',
             'import/extensions': 'off',

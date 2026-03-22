@@ -49,7 +49,7 @@ new HttpError(status?: number, message?: string, details?: any)
 **Methods:**
 
 ```ts
-error.toJSON(): { error: string, status: number, message: string, details?: any }
+error.toJSON(): { code: string, status: number, message: string, details?: any }
 ```
 
 Returns a plain object ready for `JSON.stringify`. The `details` field is omitted when it is `null`.
@@ -119,7 +119,7 @@ Sets `Content-Type: application/json` in both error cases.
 const wrapped = catchErrors(async (req, res) => {
     throw new ForbiddenError('Access denied')
 })
-// responds: 403 { "error": "ForbiddenError", "status": 403, "message": "Access denied" }
+// responds: 403 { "data": null, "error": { "code": "ForbiddenError", "status": 403, "message": "Access denied" } }
 ```
 
 ## Error Handling

@@ -1,7 +1,7 @@
 {
   "name": "imagic-errors",
   "version": "2.0.0",
-  "description": "HTTP error classes and middleware for imagic-web-server",
+  "description": "Define typed HTTP error classes and catch them as structured JSON responses",
   "type": "module",
   "exports": {
     ".": "./src/index.js",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "chai": "^6.2.2",
+    "chai": "latest",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
