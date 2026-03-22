@@ -1,0 +1,44 @@
+{
+  "name": "imagic-errors",
+  "version": "1.0.0",
+  "description": "HTTP error classes and middleware for imagic-web-server",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "node --test ./tests/**/*.test.js",
+    "lint": "eslint src tests",
+    "lint:fix": "eslint src tests --fix"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "imagic",
+    "errors",
+    "http",
+    "error-handling"
+  ],
+  "author": "iMagicKey",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "chai": "^6.2.2",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-promise": "^7.2.1",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1"
+  }
+}
