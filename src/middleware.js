@@ -16,10 +16,10 @@ export function catchErrors(handler) {
         } catch (err) {
             if (err instanceof HttpError) {
                 res.writeHead(err.status, { 'Content-Type': 'application/json' })
-                res.end(JSON.stringify(err.toJSON()))
+                res.end(JSON.stringify({ data: null, error: err.toJSON() }))
             } else {
                 res.writeHead(500, { 'Content-Type': 'application/json' })
-                res.end(JSON.stringify({ error: 'InternalServerError', status: 500, message: 'An unexpected error occurred' }))
+                res.end(JSON.stringify({ data: null, error: { code: 'InternalServerError', status: 500, message: 'An unexpected error occurred' } }))
             }
         }
     }

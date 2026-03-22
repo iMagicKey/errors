@@ -11,7 +11,7 @@ export class HttpError extends Error {
 
     toJSON() {
         return {
-            error: this.name,
+            code: this.name,
             status: this.status,
             message: this.message,
             ...(this.details !== null && { details: this.details }),

@@ -43,7 +43,7 @@ describe('HttpError', () => {
         const json = err.toJSON()
         expect(json.status).to.equal(400)
         expect(json.message).to.equal('Bad')
-        expect(json.error).to.equal('HttpError')
+        expect(json.code).to.equal('HttpError')
         expect(json.details.field).to.equal('email')
     })
 
@@ -102,7 +102,7 @@ describe('Error subclasses', () => {
         it(`${ErrorClass.name} toJSON includes status`, () => {
             const json = new ErrorClass().toJSON()
             expect(json.status).to.equal(status)
-            expect(json.error).to.equal(ErrorClass.name)
+            expect(json.code).to.equal(ErrorClass.name)
         })
     }
 })

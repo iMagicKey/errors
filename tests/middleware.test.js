@@ -48,9 +48,10 @@ describe('catchErrors', () => {
         await handler(req, res)
         expect(res.statusCode).to.equal(404)
         const parsed = JSON.parse(res.body)
-        expect(parsed.status).to.equal(404)
-        expect(parsed.message).to.equal('User not found')
-        expect(parsed.error).to.equal('NotFoundError')
+        expect(parsed.data).to.be.null
+        expect(parsed.error.status).to.equal(404)
+        expect(parsed.error.message).to.equal('User not found')
+        expect(parsed.error.code).to.equal('NotFoundError')
     })
 
     it('returns 500 for non-HttpError', async () => {
@@ -61,8 +62,9 @@ describe('catchErrors', () => {
         await handler(req, res)
         expect(res.statusCode).to.equal(500)
         const parsed = JSON.parse(res.body)
-        expect(parsed.status).to.equal(500)
-        expect(parsed.error).to.equal('InternalServerError')
+        expect(parsed.data).to.be.null
+        expect(parsed.error.status).to.equal(500)
+        expect(parsed.error.code).to.equal('InternalServerError')
     })
 
     it('sets Content-Type to application/json on error', async () => {
@@ -102,7 +104,7 @@ describe('catchErrors', () => {
         })
         await handler(req, res)
         const parsed = JSON.parse(res.body)
-        expect(parsed.details.field).to.equal('email')
+        expect(parsed.error.details.field).to.equal('email')
     })
 
     it('handles synchronous throws in wrapped handler', async () => {
