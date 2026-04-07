@@ -1,21 +1,15 @@
 # UPDATE — imagic-errors
 
-## Критические баги
-- нет
+> Audit performed: 2026-04-07. Version at time of audit: 2.0.1
 
-## package.json
-- нет
+---
 
-## ESLint
-- нет
+## API improvements (backlog)
 
-## Тесты
-- нет
+- [ ] `ValidationError` with per-field form details
 
-## Улучшения API (backlog)
-- [ ] `createErrorMiddleware` для глобального обработчика ошибок imagic-web-server
-- [ ] Сериализация ошибок в JSON для логирования
-- [ ] `ValidationError` с детализацией по полям формы
+---
 
-## Задачи (backlog)
-- [ ] Интеграционные примеры с imagic-web-server
+## Backlog
+
+- [ ] Integration examples with imagic-web-server

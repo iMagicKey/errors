@@ -118,3 +118,14 @@ throw new HttpError(418, "I'm a teapot")
 - `catchErrors` does not call a `next` function — it sends the response directly. Do not use it as a connect-style middleware itself; it is a route handler wrapper.
 - All 11 subclasses set `.name` to the class name (e.g. `'NotFoundError'`), not `'HttpError'`. Use this field in client error parsing.
 - `isHttpError` uses `instanceof` — errors crossing module boundaries (different copies of the package) may return `false`. Use a single installation.
+
+---
+
+## Knowledge Base
+
+**KB tags for this library:** `imagic-errors, error-handling`
+
+Before COMPLEX tasks — invoke `knowledge-reader` with tags above + task-specific tags.
+After completing a task — if a reusable pattern, error, or decision emerged, invoke `knowledge-writer` with `source: imagic-errors`.
+
+See `CLAUDE.md` §Knowledge Base Protocol for the full workflow.
