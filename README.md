@@ -1,3 +1,12 @@
+> [!CAUTION]
+> **DEPRECATED — NO LONGER MAINTAINED**
+>
+> `imagic-errors` is no longer actively developed or supported, and no further updates are planned. Existing published npm versions remain available for compatibility, but should not be used for new projects.
+>
+> **Recommended direction:** the native [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) class and your application or framework error handlers. These alternatives are not drop-in API replacements, so migrating requires code changes.
+>
+> Unreleased changes are kept for reference on the [`stabilization/errors-20261101`](https://github.com/iMagicKey/errors/tree/stabilization/errors-20261101) branch. They are not in any published npm version.
+
 # imagic-errors
 
 > HTTP error classes and catch-all middleware for Node.js servers.
